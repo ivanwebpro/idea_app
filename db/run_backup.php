@@ -18,7 +18,9 @@ $backupname_path = "$webroot/db/$backupname_db_sql";
 
 $command = "mysqldump  --opt --skip-extended-insert --lock-tables=false -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DB_NAME > $backupname_path"; 
 
-ob_start();
-//print "<hr>$command<hr>";
+//ob_start();
+print "<hr>$command<hr>";
 system($command);
-ob_end_clean();
+//ob_end_clean();
+
+print "<b>Backup finished</b>";
