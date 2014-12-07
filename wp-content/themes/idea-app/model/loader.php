@@ -2,7 +2,7 @@
 
 function idea_app_models_autoloader($class)
 {
-	$f = $class.'.php';
+	$f = dirname(__FILE__).DIRECTORY_SEPARATOR.$class.'.php';
  	if (file_exists($f))
 	{
 		include $f;
